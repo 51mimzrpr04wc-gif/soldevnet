@@ -72,7 +72,7 @@ def worker(worker_id):
             new_wallet = Keypair()
             new_pubkey = new_wallet.pubkey()
             
-            payload = {"jsonrpc": "2.0", "id": 1, "method": "requestAirdrop", "params": [str(new_pubkey), 1000000000]}
+            payload = {"jsonrpc": "2.0", "id": 1, "method": "requestAirdrop", "params": [str(new_pubkey), 5000000000]}
             
             try:
                 resp = requests.post(SOLANA_RPC, json=payload, proxies=proxies_config, timeout=8)
